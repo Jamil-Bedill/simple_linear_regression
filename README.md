@@ -105,7 +105,8 @@ sns.regplot(data = ols_data, x = 'Radio', y = 'Sales', color = 'darkred')
 The graph shows that the linearity assumption is met as the data points are approximately linearly connected along the best-fit line. Now, let's check the normality assumption. Get the residuals from the model.
 
 2. Independence Assumption: We assume that the observations are independent. 
-3. Normality Assumption: 	The errors (residuals) are normally distributed (bell-shaped curve) with a mean of zero. This is crucial for valid hypothesis testing and confidence intervals, especially with small samples. We can check this assumption by plotting the residuals of the model or by a Q-Q plot. 
+3. Normality Assumption: 	The errors (residuals) are normally distributed (bell-shaped curve) with a mean of zero. This is crucial for valid hypothesis testing and confidence intervals, especially with small samples. We can check this assumption by plotting the residuals of the model or by a Q-Q plot.
+   
  ```
 #  Get the residuals from the model.
 residuals = model.resid
@@ -118,9 +119,11 @@ axes[1].set_title('Q-Q Plot of Model Residuals')
 plt.show()
 ```
 <img width="723" height="401" alt="image" src="https://github.com/user-attachments/assets/f81f5b49-e81b-4f27-8be8-83fca2d73416" />
+
 The histogram of residuals shows that they are normally distributed, and the Q-Q plot shows that the datapoints are closely following a straight line; both of these graphs confirm that the assumption of normality is met. 
 4. Equal Variance (Homoscedasticity): The variance (spread) of the errors is constant across all levels of the independent variables. 
 We can check this assumption by plotting a scatterplot of fitted values against the model residuals. 
+
  ```
 # Create a scatterplot of residuals against fitted values.
 # Get fitted values.
